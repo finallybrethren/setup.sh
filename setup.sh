@@ -8,11 +8,10 @@ remove_games() {
 echo -e "\n"
 echo -e "Removing games..\n"
 remove_games
-TOOLS=(curl forensics-full git gnome golang ipython3 ncrack net-tools open-vm-tools-desktop python3-pip smbclient sqlmap terminator tmux vim wifite)
+TOOLS=(curl forensics-full git gnome golang ipython3 ncrack net-tools python3-pip smbclient sqlmap terminator tmux vim wifite)
 install_tools () {
     for i in "${TOOLS[@]}";do sudo apt install -y $i; done
-    go get github.com/OJ/gobuster
-    xdg-open https://www.vmware.com/go/getworkstation-linux
+    go get github.com/OJ/gobuster    
     echo -n "Install sublime-text? y/n "
     read INSTALL_SUBLIME
     if [[ $INSTALL_SUBLIME = 'y' ]]; then
